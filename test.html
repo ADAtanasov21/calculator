@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator Tests</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        .pass { color: green; }
+        .fail { color: red; }
+        .test { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Calculator Function Tests</h1>
+    <div id="results"></div>
+
+    <script src="calc.js"></script>
+    <script>
+        const tests = [
+            { expr: "2 + 3*4", expected: "14", desc: "Basic precedence" },
+            { expr: "(2 + 3)*4", expected: "20", desc: "Parentheses" },
+            { expr: "-3 + 2*(-4)", expected: "-11", desc: "Unary minus" },
+            { expr: "10/(5-5)", expected: "ERROR: Division by zero", desc: "Division by zero" },
+            { expr: "8/4/2", expected: "1", desc: "Left associativity" },
+            { expr: "3.5 + 2.5", expected: "6", desc: "Decimals" },
+            { expr: "10 - 5 - 2", expected: "3", desc: "Subtraction associativity" },
+            { expr: "2*3+4", expected: "10", desc: "Mixed operators" },
+            { expr: "2+3*4-5", expected: "9", desc: "Multiple operations" },
+            { expr: "-5", expected: "-5", desc: "Simple unary minus" },
+            { expr: "-(2+3)", expected: "-5", desc: "Unary minus with parens" },
+            { expr: "2*-3", expected: "-6", desc: "Unary minus after operator" },
+            { expr: "100/10/2", expected: "5", desc: "Division chain" },
+        ];
+
+        const resultsDiv = document.getElementById('results');
+        let passed = 0;
+        let failed = 0;
+
+        for (const test of tests) {
+            const result = calculate(test.expr);
+            const isPass = result === test.expected;
+            
+            if (isPass) passed++;
+            else failed++;
+
+            const div = document.createElement('div');
+            div.className = `test ${isPass ? 'pass' : 'fail'}`;
+            div.textContent = `${isPass ? '✓' : '✗'} ${test.desc}: "${test.expr}" => ${result} (expected: ${test.expected})`;
+            resultsDiv.appendChild(div);
+        }
+
+        const summary = document.createElement('div');
+        summary.style.marginTop = '20px';
+        summary.style.fontWeight = 'bold';
+        summary.textContent = `Results: ${passed} passed, ${failed} failed`;
+        summary.style.color = failed === 0 ? 'green' : 'red';
+        resultsDiv.appendChild(summary);
+    </script>
+</body>
+</html>

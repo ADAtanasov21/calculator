@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функционален Калкулатор - Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🧮</span> FunCalc
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#calculator">Калкулатор</a></li>
+                <li><a href="#features">Функции</a></li>
+                <li><a href="#about">За нас</a></li>
+                <li><a href="#contact">Контакт</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Calculator -->
+    <section id="calculator" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Функционален Калкулатор</h1>
+                <p>Мощен, бърз и лесен за ползване</p>
+            </div>
+            <div class="calculator">
+                <div class="display">
+                    <div class="current">0</div>
+                </div>
+                
+                <div class="buttons">
+                    <!-- Row 1 -->
+                    <button class="btn fn" data-fn="percent">%</button>
+                    <button class="btn fn" data-fn="ce">CE</button>
+                    <button class="btn fn" data-fn="clear">C</button>
+                    <button class="btn fn" data-fn="backspace">⌫</button>
+                    
+                    <!-- Row 2 -->
+                    <button class="btn fn" data-fn="reciprocal">1/x</button>
+                    <button class="btn fn" data-fn="square">x²</button>
+                    <button class="btn fn" data-fn="sqrt">²√x</button>
+                    <button class="btn op" data-op="/">÷</button>
+                    
+                    <!-- Row 3 -->
+                    <button class="btn num" data-num="7">7</button>
+                    <button class="btn num" data-num="8">8</button>
+                    <button class="btn num" data-num="9">9</button>
+                    <button class="btn op" data-op="*">×</button>
+                    
+                    <!-- Row 4 -->
+                    <button class="btn num" data-num="4">4</button>
+                    <button class="btn num" data-num="5">5</button>
+                    <button class="btn num" data-num="6">6</button>
+                    <button class="btn op" data-op="-">−</button>
+                    
+                    <!-- Row 5 -->
+                    <button class="btn num" data-num="1">1</button>
+                    <button class="btn num" data-num="2">2</button>
+                    <button class="btn num" data-num="3">3</button>
+                    <button class="btn op" data-op="+">+</button>
+                    
+                    <!-- Row 6 -->
+                    <button class="btn fn" data-fn="toggle-sign">+/−</button>
+                    <button class="btn num" data-num="0">0</button>
+                    <button class="btn num" data-num=".">.</button>
+                    <button class="btn equal" data-fn="equal">=</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Функции</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">➕</div>
+                <h3>Основни Операции</h3>
+                <p>Събиране, изваждане, умножение, деление</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📐</div>
+                <h3>Научни Функции</h3>
+                <p>Квадрат, корен, реципрочна стойност</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Бързо & Лесно</h3>
+                <p>Интуитивен интерфейс и клавиатурна поддръжка</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Надежден</h3>
+                <p>Чистотата на функционалното програмиране</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>За Нас</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Изградено с Функционално Програмиране</h3>
+                <p>FunCalc е демонстрация на чистото функционално програмиране. Без класи, без глобално състояние, без мутации.</p>
+                <p>Калкулаторът поддържа:</p>
+                <ul>
+                    <li>✓ Основни аритметични операции</li>
+                    <li>✓ Научни функции (квадрат, корен)</li>
+                    <li>✓ Процентни изчисления</li>
+                    <li>✓ Пълна клавиатурна поддръжка</li>
+                    <li>✓ Отзивчив дизайн</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <span>💻</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Контакт</h2>
+        <div class="contact-content">
+            <p>Искате да научите повече за функционалното програмиране?</p>
+            <p>Email: <strong>info@funcalc.com</strong></p>
+            <p>GitHub: <strong>github.com/funcalc</strong></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FunCalc</h4>
+                <p>Функционален калкулатор изградена с чистотата на програмирането</p>
+            </div>
+            <div class="footer-section">
+                <h4>Быстрые ссылки</h4>
+                <ul>
+                    <li><a href="#calculator">Калкулатор</a></li>
+                    <li><a href="#features">Функции</a></li>
+                    <li><a href="#about">За нас</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Технологии</h4>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript ES6+</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FunCalc. Всички права запазени.</p>
+        </div>
+    </footer>
+
+    <script src="calc.js"></script>
+</body>
+</html>
